@@ -1,14 +1,23 @@
+import os
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
 import requests
 from bs4 import BeautifulSoup
 import json
 
 def requests_func():
-    url_two = "https://nodejs.medium.com/"
-    response = requests.get(url_two).text
+    os.environ['PATH'] += r'C:/SeleniumDrivers'
+    driver = webdriver.Chrome()
+    driver.get('http://192.168.1.100/eventlog.htm')
+    driver.implicitly_wait(10)
+    url = driver.current_url
+    time.sleep(2)
+    response = requests.get(url).text
     soup = BeautifulSoup(response, 'lxml')
     liste = []
 
-    item =soup.find(id='501a')
+    item =soup.find_all('tr')
     for x in item:
         liste.append(str(x))
         print(liste)
