@@ -12,7 +12,7 @@ def requests_func():
     driver.get('http://192.168.1.100/eventlog.htm')
     driver.implicitly_wait(10)
     url = driver.current_url
-    time.sleep(2)
+    driver.implicitly_wait(2)
     response = requests.get(url).text
     soup = BeautifulSoup(response, 'lxml')
     liste = []
@@ -20,7 +20,6 @@ def requests_func():
     item =soup.find_all('tr')
     for x in item:
         liste.append(str(x))
-        print(liste)
 
     def write_json(data, filename='data.json'):
         with open (filename,"w") as f:
@@ -29,7 +28,7 @@ def requests_func():
     with open ("data.json") as json_file:
         data = json.load(json_file)
         temp = data["value"]
-        y = {"key" : liste}
+        y = {"key" : liste[-1]}
         temp.append(y)
 
     write_json(data)
