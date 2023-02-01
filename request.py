@@ -28,7 +28,7 @@ def requests_func():
     with open ("data.json") as json_file:
         data = json.load(json_file)
         temp = data["value"]
-        y = {"key" : liste[-1]}
+        y = {"log" : liste[-1]}
         temp.append(y)
 
     write_json(data)

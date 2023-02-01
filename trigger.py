@@ -25,7 +25,6 @@ def trigger_func():
             driver.refresh()
             retries += 1
     
- 
 
 
     

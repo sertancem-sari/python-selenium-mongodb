@@ -1,7 +1,7 @@
 {
     "value": [
         {
-            "key": "<tr><td nowrap=\"\" valign=\"TOP\" width=\"15%\">AlarmStart</td><td nowrap=\"\" valign=\"TOP\" width=\"15%\">SDI 1A</td><td nowrap=\"\" valign=\"TOP\" width=\"40%\">Input Missing</td></tr>"
+            "log": "<tr><td nowrap=\"\" valign=\"TOP\" width=\"15%\">AlarmStart</td><td nowrap=\"\" valign=\"TOP\" width=\"\"></td></tr>"
         }
     ]
 }
