@@ -13,6 +13,5 @@ def database_func():
 
     with open('data.json') as json_file:
         data = json.load(json_file)
-        print(data)
         json_file.close()
-    collection.insert_one(data)
+    collection.insert_many(data)

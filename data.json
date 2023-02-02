@@ -1,7 +1,18 @@
-{
-    "value": [
-        {
-            "log": "<tr><td nowrap=\"\" valign=\"TOP\" width=\"15%\">AlarmStart</td><td nowrap=\"\" valign=\"TOP\" width=\"\"></td></tr>"
-        }
-    ]
-}
+[
+    {
+        "logs": [
+            "AlarmStart",
+            "SDI 1A",
+            "Input Missing (Signal Missing)",
+            "02-Feb-23"
+        ]
+    },
+    {
+        "logs": [
+            "AlarmStart",
+            "SDI 1A",
+            "Input Missing (Signal Missing)",
+            "02-Feb-23"
+        ]
+    }
+]
