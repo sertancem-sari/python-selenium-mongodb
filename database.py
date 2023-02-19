@@ -1,12 +1,14 @@
-""" import os
+import os
 from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv()) """
+load_dotenv(find_dotenv())
 import json
 from pymongo import MongoClient
 
+
+
 def database_func():
-    
-    connection_string = 'mongodb+srv://cemsari:test123@cluster0.oyrul3n.mongodb.net/?retryWrites=true&w=majority'
+    load_dotenv(find_dotenv())
+    connection_string = os.environ.get("DATA_URI")
     client = MongoClient(connection_string)
     Mylogs = client.Mylogs
     collection = Mylogs.logs
